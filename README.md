@@ -1,14 +1,42 @@
-# node调用tron合约demo
+# 创建账户
+
+#### 安装创建用户依赖
+```javascript
+npm install jssha crypto elliptic js-sha3
+```
+
+#### 创建账户配置项
+```javascript
+// createAccount.js 文件 NUMBER 值为创建账户的数量
+```
+
+#### 启动创建账户(创建成功后 会在根目录生成account.json,此文件就是你创建的账户)
+```javascript
+node createAccount.js
+```
 
 
-## npm install tronweb
+# 批量调用
 
-#### 请保证你的用户列表均有足够TRX余额
+#### 安装批量调用依赖
 
-#### 用户列表请按照格式写入account.json文件
+```javascript
+npm install tronweb
+```
 
-#### index.js MAXPRICE变量为最大买入价格 单位为SUN(1000000 SUN = 1 TRX)到了最大买入价,脚本会停止执行
+#### 批量调用配置项
+```javascript
+// index.js MAXPRICE变量为最大买入价格 单位为SUN(1000000 SUN = 1 TRX)到了最大买入价,脚本会停止执行
+// index.js NUMBER为最大买入次数,到了次数后脚本会停止执行 单位为SUN(1000000 SUN = 1 TRX)
+```
 
-#### index.js NUMBER为最大买入次数,到了次数后脚本会停止执行 单位为SUN(1000000 SUN = 1 TRX)
+#### 批量调用注意事项
+```javascript
+// 请保证你的用户列表均有足够TRX余额(批量调用程序并没有判断用户是否余额足够,如果余额不足会报错,并且程序停止运行)
+// 用户列表在account.json文件, 也就是你创建的账户
+```
 
-## 启动脚本命令 node idnex.js
+#### 启动批量调用
+```javascript
+node idnex.js
+```
