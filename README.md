@@ -16,6 +16,24 @@ node createAccount.js
 ```
 
 
+# 批量转账
+
+#### 安装批量转账依赖
+```javascript
+npm install tronweb
+```
+
+#### 配置批量转账
+```javascript
+// transaction.js文件 AMOUNT值是给每一个账户转多少钱
+// 上一步生成的账户都会接收到。
+```
+
+#### 执行批量转账
+```javascript
+node transaction.js
+```
+
 # 批量调用
 
 #### 安装批量调用依赖

@@ -5,6 +5,12 @@ const abi = require('./abi.js')
 const fullNode = 'https://api.trongrid.io';
 const solidityNode = 'https://api.trongrid.io';
 const eventServer = 'https://api.trongrid.io/';
+
+const tronWeb = new TronWeb(
+  fullNode,
+  solidityNode,
+  eventServer
+);
 // 最大价格
 const MAXPRICE = 30000000
 // 最大调用次数
@@ -16,13 +22,6 @@ const NUMBER = 100
 let number = 0
 // 这一次调用buy用户的index
 let userIndex = 0
-
-const tronWeb = new TronWeb(
-  fullNode,
-  solidityNode,
-  eventServer,
-  privateKey
-);
 
 const tron = tronWeb.contract(abi, '413d98cf7e5a5e5a8fe464732fe58cbb3f0428dfa0')
 
